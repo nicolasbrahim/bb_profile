@@ -45,8 +45,6 @@ dir3(){
   python3 /opt/tools/dirsearch/dirsearch.py -e sql,asp,aspx,jsp,php -u
 }
 
-
-
 ipinfo(){
   curl http://ipinfo.io/$1
 }
