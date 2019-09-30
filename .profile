@@ -2,7 +2,7 @@ export PATH=$PATH:/root/go/bin
 
 # Subdomain
 am(){
-  /opt/tools/amass_v3.1.5_linux_amd64/amass enum -w /opt/tools/amass_v3.1.5_linux_amd64/examples/wordlists/all.txt -o subdomains.txt -d $1
+  amass enum -o subdomains.txt -d $1
 }
 
 certspotter(){
