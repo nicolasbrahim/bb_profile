@@ -14,6 +14,10 @@ crtsh(){
   cat $1 | httpprobe | tee -a $1-alive.txt
 }
 
+crtsh_2(){
+  curl -fsSL "https://crt.sh/?CN=%25.$1" | sort -n | uniq -c | grep -o -P '(?<=\<TD\>).*(?=\<\/TD\>)' | sed -e '/white-space:normal/d'
+}
+
 fd(){
   findomain -o txt -t $1
 }
